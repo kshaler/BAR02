@@ -23,8 +23,8 @@ False                   Echo        - Echo input data to <RootName>.ech (flag)
 "OpenFAST_BAR_02_BeamDyn.dat" BDBldFile(1) - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
 "OpenFAST_BAR_02_BeamDyn.dat" BDBldFile(2) - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
 "OpenFAST_BAR_02_BeamDyn.dat" BDBldFile(3) - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
-"OpenFAST_BAR_02_InflowFile.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
-"OpenFAST_BAR_02_AeroDyn15.dat" AeroFile    - Name of file containing aerodynamic input parameters (quoted string)
+"../Nominal/OpenFAST_BAR_02_InflowFile.dat" InflowFile  - Name of file containing inflow wind input parameters (quoted string)
+"../Nominal/OpenFAST_BAR_02_AeroDyn15.dat" AeroFile    - Name of file containing aerodynamic input parameters (quoted string)
 "OpenFAST_BAR_02_ServoDyn.dat" ServoFile   - Name of file containing control and electrical-drive input parameters (quoted string)
 "unused"               HydroFile   - Name of file containing hydrodynamic input parameters (quoted string)
 "unused"               SubFile     - Name of file containing sub-structural input parameters (quoted string)
@@ -35,12 +35,18 @@ True                   SumPrint    - Print summary data to "<RootName>.sum" (fla
 5.0                    SttsTime    - Amount of time between screen status messages (s)
 99999.0                ChkptTime   - Amount of time between creating checkpoint files for potential restart (s)
 0.01              DT_Out      - Time step for tabular output (s) (or "default")
-0.0                    TStart      - Time to begin tabular output (s)
+300.0                    TStart      - Time to begin tabular output (s)
 3                      OutFileFmt  - Format for tabular (time-marching) output file (switch) {1: text file [<RootName>.out], 2: binary file [<RootName>.outb], 3: both}
 True                   TabDelim    - Use tab delimiters in text tabular output file? (flag) {uses spaces if false}
 "ES10.3E2"             OutFmt      - Format used for text tabular output, excluding the time channel.  Resulting field should be 10 characters. (quoted string)
 ---------------------- LINEARIZATION -------------------------------------------
 False                  Linearize   - Linearization analysis (flag)
+False		       CalcSteady
+3		       TrimCase
+0.0001		       TrimTol
+0.001		       TrimGain
+0		       Twr_Kdmp
+0		       Bld_Kdmp
 2                      NLinTimes   - Number of times to linearize (-) [>=1] [unused if Linearize=False]
 30, 60                 LinTimes    - List of times at which to linearize (s) [1 to NLinTimes] [unused if Linearize=False]
 1                      LinInputs   - Inputs included in linearization (switch) {0=none; 1=standard; 2=all module inputs (debug)} [unused if Linearize=False]

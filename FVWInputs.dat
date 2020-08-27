@@ -2,7 +2,7 @@
 Free wake input file for the Helix test case
 --------------------------- GENERAL OPTIONS ---------------------------------------------------
 5       IntMethod          Integration method {5: Forward Euler 1st order, default: 5} (switch)
-0.22 DTfvw              Time interval for wake propagation. {default: dtaero} (s)
+0.1097 DTfvw              Time interval for wake propagation. {default: dtaero} (s)
 default   FreeWakeStart      Time when wake is free. (-) value = always free. {default: 0.0} (s)
 0.0     FullCircStart      Time at which full circulation is reached. {default: 0.0} (s)
 --------------------------- CIRCULATION SPECIFICATIONS ----------------------------------------
@@ -14,7 +14,7 @@ default CircSolvMaxIter    Maximum number of iterations for circulation solving 
 ===============================================================================================
 --------------------------- WAKE OPTIONS ------------------------------------------------------
 ------------------- WAKE EXTENT AND DISCRETIZATION --------------------------------------------
-50      nNWPanel           Number of near-wake panels [integer] (-)
+216      nNWPanel           Number of near-wake panels [integer] (-)
 300     WakeLength         Total wake distance [integer] (number of time steps)
 default       FreeWakeLength     Wake length that is free [integer] (number of time steps) {default: WakeLength}
 False   FWShedVorticity    Include shed vorticity in the far wake {default: false}
